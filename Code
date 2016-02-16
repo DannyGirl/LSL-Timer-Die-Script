@@ -1,0 +1,21 @@
+default
+{
+    on_rez(integer start)
+    {
+        llOwnerSay("Will die in 5...");
+        llSetTimerEvent(5);
+        llSleep(1);
+        llOwnerSay("4...");
+        llSleep(1);
+        llOwnerSay("3...");
+        llSleep(1);
+        llOwnerSay("2...");
+        llSleep(1);
+        llOwnerSay("1...");
+    }
+    timer()
+    {
+        llOwnerSay("Deleting prim");
+        llDie();
+    }
+}
